@@ -1,0 +1,51 @@
+python findLinearRecurrence.py --staid=6100 --endid=21130
+python findLinearRecurrence.py --staid=21130 --endid=36160
+python findLinearRecurrence.py --staid=36160 --endid=51190
+python findLinearRecurrence.py --staid=51190 --endid=66220
+python findLinearRecurrence.py --staid=66220 --endid=81250
+python findLinearRecurrence.py --staid=81250 --endid=96280
+python findLinearRecurrence.py --staid=96280 --endid=111310
+python findLinearRecurrence.py --staid=111310 --endid=126340
+python findLinearRecurrence.py --staid=126340 --endid=141370
+python findLinearRecurrence.py --staid=141370 --endid=156400
+python findLinearRecurrence.py --staid=156400 --endid=171430
+python findLinearRecurrence.py --staid=171430 --endid=186460
+python findLinearRecurrence.py --staid=186460 --endid=201490
+python findLinearRecurrence.py --staid=201490 --endid=216520
+python findLinearRecurrence.py --staid=216520 --endid=231550
+python findLinearRecurrence.py --staid=231550 --endid=246580
+python findLinearRecurrence.py --staid=246580 --endid=261610
+python findLinearRecurrence.py --staid=261610 --endid=276640
+python findLinearRecurrence.py --staid=276640 --endid=291670
+python findLinearRecurrence.py --staid=291670 --endid=306700
+
+python findLinearRecurrence.py --staid=6100 --endid=156396
+python findLinearRecurrence.py --staid=150296 --endid=306692
+
+
+python findLinearRecurrence.py --file_name=base --staid=199 --endid=11000
+python findLinearRecurrence.py --file_name=sign --staid=-1 --endid=11000
+
+python findSequenceFuntion.py --file_name=base --staid=479 --endid=5000
+python findSequenceFuntion.py --file_name=base --staid=5300 --endid=11000
+python findSequenceFuntion.py --file_name=base --staid=8297 --endid=11000
+
+python findSequenceFuntion.py --file_name=sign --staid=3779 --endid=5000
+python findSequenceFuntion.py --file_name=sign --staid=5000 --endid=11000
+
+wolframscript -file findLinearRecurrence.sh 1,2,4,6,8,10,12,14
+wolframscript -file linearrecurrence.sh 31,-155,125 1,31,806 20
+
+
+python findSequenceFuntion.py --file_name=base --staid=7412 --endid=8101
+python findSequenceFuntion.py --file_name=base --staid=8297 --endid=11000
+
+python findSequenceFuntion.py --file_name=base_1w_testdata_teshu --staid=-1 --endid=500
+python findSequenceFuntion.py --file_name=base_1w_testdata_teshu --staid=500 --endid=1000
+python findSequenceFuntion.py --file_name=base_1w_testdata_teshu --staid=1000 --endid=1500
+
+python findSequenceFuntion.py --file_name=sign_1w_testdata_teshu --staid=-1 --endid=40
+python findSequenceFuntion.py --file_name=sign_1w_testdata_teshu --staid=5 --endid=10
+
+python findLinearRecurrence.py --file_name=base_1w_testdata_teshu --staid=-1 --endid=1500
+python findLinearRecurrence.py --file_name=sign_1w_testdata_teshu --staid=-1 --endid=40

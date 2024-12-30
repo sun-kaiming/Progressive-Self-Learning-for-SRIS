@@ -1,0 +1,5 @@
+val():  位于generators.py第212行，
+        #val函数可以使用hyp公式预测下面的term
+
+def decode(self, lst):# 把前缀表达式转化为中缀表达式
+                      # 位于encoders.py第199行

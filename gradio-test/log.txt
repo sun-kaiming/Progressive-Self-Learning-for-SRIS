@@ -1,0 +1,587 @@
+filename:  /home/skm21/OEIS_Sequence_Formula_discovery-main/recur/utils/args.pkl
+00000
+222222222222222222222222
+23333333333333333333333333333args.small_oeis_testset: False
+解码数列./data-bin/decoder_seq_set/oeis_seq_split1文件已存在！
+2024-12-01 18:22:32 | INFO | fairseq_cli.train | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 96, 'log_format': None, 'log_file': 'checkpoints/test_1201/iter1/file.log', 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': True, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': None, 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': True, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 256, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': 256, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 2, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.1, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.0004], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints/test_1201/iter1/model1', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': 1, 'no_save': False, 'no_epoch_checkpoints': True, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 0, 'input': '-'}, 'model': Namespace(_name='transformer', activation_dropout=0.0, activation_fn='relu', adam_betas=(0.9, 0.999), adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, aim_repo=None, aim_run_hash=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, arch='transformer', attention_dropout=0.0, azureml_logging=False, batch_size=256, batch_size_valid=256, best_checkpoint_metric='loss', bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_activations=False, checkpoint_shard_count=1, checkpoint_suffix='', clip_norm=0.1, combine_valid_subsets=None, continue_once=None, cpu=False, cpu_offload=False, criterion='cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/test_1201/iter1.oeis', data_buffer_size=10, dataset_impl=None, ddp_backend='pytorch_ddp', ddp_comm_hook='none', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layerdrop=0, decoder_layers=6, decoder_layers_to_keep=None, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_num_procs=1, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.2, ema_decay=0.9999, ema_fp32=False, ema_seed_model=None, ema_start_update=0, ema_update_freq=1, empty_cache_freq=0, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layerdrop=0, encoder_layers=6, encoder_layers_to_keep=None, encoder_learned_pos=False, encoder_normalize_before=False, eos=2, eval_bleu=False, eval_bleu_args='{}', eval_bleu_detok='space', eval_bleu_detok_args='{}', eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, finetune_from_model=None, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=True, fp16_adam_stats=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, fp32_reduce_scatter=False, gen_subset='test', gradient_as_bucket_view=False, grouped_shuffling=False, heartbeat_timeout=-1, ignore_unused_valid_subsets=False, keep_best_checkpoints=1, keep_interval_updates=-1, keep_interval_updates_pattern=-1, keep_last_epochs=-1, layernorm_embedding=False, left_pad_source=True, left_pad_target=False, load_alignments=False, load_checkpoint_on_all_dp_ranks=False, localsgd_frequency=3, log_file='checkpoints/test_1201/iter1/file.log', log_format=None, log_interval=96, lr=[0.0004], lr_scheduler='inverse_sqrt', max_epoch=2, max_tokens=None, max_tokens_valid=None, max_update=0, max_valid_steps=None, maximize_best_checkpoint_metric=False, memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_cross_attention=False, no_epoch_checkpoints=True, no_last_checkpoints=False, no_progress_bar=False, no_reshard_after_forward=False, no_save=False, no_save_optimizer_state=False, no_scale_embedding=False, no_seed_provided=False, no_token_positional_embeddings=False, not_fsdp_flatten_parameters=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, offload_activations=False, on_cpu_convert_precision=False, optimizer='adam', optimizer_overrides='{}', pad=1, patience=-1, pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, plasma_path='/tmp/plasma', profile=False, quant_noise_pq=0, quant_noise_pq_block_size=8, quant_noise_scalar=0, quantization_config_path=None, required_batch_size_multiple=8, required_seq_len_multiple=1, reset_dataloader=False, reset_logging=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='checkpoints/test_1201/iter1/model1', save_interval=1, save_interval_updates=0, scoring='bleu', seed=1, sentence_avg=False, shard_id=0, share_all_embeddings=False, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, skip_remainder_batch=False, slowmo_base_algorithm='localsgd', slowmo_momentum=None, source_lang=None, stop_min_lr=-1.0, stop_time_hours=0, store_ema=False, suppress_crashes=False, target_lang=None, task='translation', tensorboard_logdir=None, threshold_loss_scale=None, tie_adaptive_weights=False, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unk=3, update_epoch_batch_itr=False, update_freq=[1], update_ordered_indices_seed=False, upsample_primary=-1, use_bmuf=False, use_old_adam=False, use_plasma_view=False, use_sharded_state=False, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, wandb_project=None, warmup_init_lr=1e-07, warmup_updates=200, weight_decay=0.0, write_checkpoints_asynchronously=False, zero_sharding='none'), 'task': {'_name': 'translation', 'data': 'data-bin/test_1201/iter1.oeis', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': False}, 'optimizer': {'_name': 'adam', 'adam_betas': [0.9, 0.999], 'adam_eps': 1e-08, 'weight_decay': 0.0, 'use_old_adam': False, 'fp16_adam_stats': False, 'tpu': False, 'lr': [0.0004]}, 'lr_scheduler': {'_name': 'inverse_sqrt', 'warmup_updates': 200, 'warmup_init_lr': 1e-07, 'lr': [0.0004]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2024-12-01 18:22:32 | INFO | fairseq.tasks.translation | [src] dictionary: 9968 types
+2024-12-01 18:22:32 | INFO | fairseq.tasks.translation | [tgt] dictionary: 40 types
+2024-12-01 18:22:32 | INFO | fairseq_cli.train | TransformerModel(
+(encoder): TransformerEncoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(9968, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerEncoderLayerBase(
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(dropout_module): FairseqDropout()
+(activation_dropout_module): FairseqDropout()
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+)
+(decoder): TransformerDecoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(40, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerDecoderLayerBase(
+(dropout_module): FairseqDropout()
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(activation_dropout_module): FairseqDropout()
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(encoder_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+(output_projection): Linear(in_features=512, out_features=40, bias=False)
+)
+)
+2024-12-01 18:22:32 | INFO | fairseq_cli.train | task: TranslationTask
+2024-12-01 18:22:32 | INFO | fairseq_cli.train | model: TransformerModel
+2024-12-01 18:22:32 | INFO | fairseq_cli.train | criterion: CrossEntropyCriterion
+2024-12-01 18:22:32 | INFO | fairseq_cli.train | num. shared model params: 49,283,072 (num. trained: 49,283,072)
+2024-12-01 18:22:32 | INFO | fairseq_cli.train | num. expert model params: 0 (num. trained: 0)
+2024-12-01 18:22:32 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter1.oeis/valid.src-tgt.src
+2024-12-01 18:22:32 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter1.oeis/valid.src-tgt.tgt
+2024-12-01 18:22:32 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter1.oeis valid src-tgt 2000 examples
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 96, 'log_format': None, 'log_file': 'checkpoints/test_1201/iter1/file.log', 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': True, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': None, 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': True, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 256, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': 256, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 2, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.1, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.0004], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints/test_1201/iter1/model2', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': 1, 'no_save': False, 'no_epoch_checkpoints': True, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 0, 'input': '-'}, 'model': Namespace(_name='transformer', activation_dropout=0.0, activation_fn='relu', adam_betas=(0.9, 0.999), adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, aim_repo=None, aim_run_hash=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, arch='transformer', attention_dropout=0.0, azureml_logging=False, batch_size=256, batch_size_valid=256, best_checkpoint_metric='loss', bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_activations=False, checkpoint_shard_count=1, checkpoint_suffix='', clip_norm=0.1, combine_valid_subsets=None, continue_once=None, cpu=False, cpu_offload=False, criterion='cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/test_1201/iter1_2.oeis', data_buffer_size=10, dataset_impl=None, ddp_backend='pytorch_ddp', ddp_comm_hook='none', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layerdrop=0, decoder_layers=6, decoder_layers_to_keep=None, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_num_procs=1, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.2, ema_decay=0.9999, ema_fp32=False, ema_seed_model=None, ema_start_update=0, ema_update_freq=1, empty_cache_freq=0, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layerdrop=0, encoder_layers=6, encoder_layers_to_keep=None, encoder_learned_pos=False, encoder_normalize_before=False, eos=2, eval_bleu=False, eval_bleu_args='{}', eval_bleu_detok='space', eval_bleu_detok_args='{}', eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, finetune_from_model=None, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=True, fp16_adam_stats=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, fp32_reduce_scatter=False, gen_subset='test', gradient_as_bucket_view=False, grouped_shuffling=False, heartbeat_timeout=-1, ignore_unused_valid_subsets=False, keep_best_checkpoints=1, keep_interval_updates=-1, keep_interval_updates_pattern=-1, keep_last_epochs=-1, layernorm_embedding=False, left_pad_source=True, left_pad_target=False, load_alignments=False, load_checkpoint_on_all_dp_ranks=False, localsgd_frequency=3, log_file='checkpoints/test_1201/iter1/file.log', log_format=None, log_interval=96, lr=[0.0004], lr_scheduler='inverse_sqrt', max_epoch=2, max_tokens=None, max_tokens_valid=None, max_update=0, max_valid_steps=None, maximize_best_checkpoint_metric=False, memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_cross_attention=False, no_epoch_checkpoints=True, no_last_checkpoints=False, no_progress_bar=False, no_reshard_after_forward=False, no_save=False, no_save_optimizer_state=False, no_scale_embedding=False, no_seed_provided=False, no_token_positional_embeddings=False, not_fsdp_flatten_parameters=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, offload_activations=False, on_cpu_convert_precision=False, optimizer='adam', optimizer_overrides='{}', pad=1, patience=-1, pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, plasma_path='/tmp/plasma', profile=False, quant_noise_pq=0, quant_noise_pq_block_size=8, quant_noise_scalar=0, quantization_config_path=None, required_batch_size_multiple=8, required_seq_len_multiple=1, reset_dataloader=False, reset_logging=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='checkpoints/test_1201/iter1/model2', save_interval=1, save_interval_updates=0, scoring='bleu', seed=1, sentence_avg=False, shard_id=0, share_all_embeddings=False, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, skip_remainder_batch=False, slowmo_base_algorithm='localsgd', slowmo_momentum=None, source_lang=None, stop_min_lr=-1.0, stop_time_hours=0, store_ema=False, suppress_crashes=False, target_lang=None, task='translation', tensorboard_logdir=None, threshold_loss_scale=None, tie_adaptive_weights=False, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unk=3, update_epoch_batch_itr=False, update_freq=[1], update_ordered_indices_seed=False, upsample_primary=-1, use_bmuf=False, use_old_adam=False, use_plasma_view=False, use_sharded_state=False, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, wandb_project=None, warmup_init_lr=1e-07, warmup_updates=200, weight_decay=0.0, write_checkpoints_asynchronously=False, zero_sharding='none'), 'task': {'_name': 'translation', 'data': 'data-bin/test_1201/iter1_2.oeis', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': False}, 'optimizer': {'_name': 'adam', 'adam_betas': [0.9, 0.999], 'adam_eps': 1e-08, 'weight_decay': 0.0, 'use_old_adam': False, 'fp16_adam_stats': False, 'tpu': False, 'lr': [0.0004]}, 'lr_scheduler': {'_name': 'inverse_sqrt', 'warmup_updates': 200, 'warmup_init_lr': 1e-07, 'lr': [0.0004]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2024-12-01 18:22:33 | INFO | fairseq.tasks.translation | [src] dictionary: 9968 types
+2024-12-01 18:22:33 | INFO | fairseq.tasks.translation | [tgt] dictionary: 40 types
+2024-12-01 18:22:33 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:22:33 | INFO | fairseq.utils | rank   0: capabilities =  7.5  ; total memory = 14.756 GB ; name = Tesla T4
+2024-12-01 18:22:33 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | training on 1 devices (GPUs/TPUs)
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | max tokens per device = None and max sentences per device = 256
+2024-12-01 18:22:33 | INFO | fairseq.trainer | Preparing to load checkpoint checkpoints/test_1201/iter1/model1/checkpoint_last.pt
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | TransformerModel(
+(encoder): TransformerEncoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(9968, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerEncoderLayerBase(
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(dropout_module): FairseqDropout()
+(activation_dropout_module): FairseqDropout()
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+)
+(decoder): TransformerDecoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(40, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerDecoderLayerBase(
+(dropout_module): FairseqDropout()
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(activation_dropout_module): FairseqDropout()
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(encoder_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+(output_projection): Linear(in_features=512, out_features=40, bias=False)
+)
+)
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | task: TranslationTask
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | model: TransformerModel
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | criterion: CrossEntropyCriterion
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | num. shared model params: 49,283,072 (num. trained: 49,283,072)
+2024-12-01 18:22:33 | INFO | fairseq_cli.train | num. expert model params: 0 (num. trained: 0)
+2024-12-01 18:22:33 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter1_2.oeis/valid.src-tgt.src
+2024-12-01 18:22:33 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter1_2.oeis/valid.src-tgt.tgt
+2024-12-01 18:22:33 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter1_2.oeis valid src-tgt 2000 examples
+2024-12-01 18:22:34 | INFO | fairseq.trainer | Loaded checkpoint checkpoints/test_1201/iter1/model1/checkpoint_last.pt (epoch 7 @ 1274 updates)
+2024-12-01 18:22:34 | INFO | fairseq.trainer | loading train data for epoch 7
+2024-12-01 18:22:34 | INFO | fairseq.data.data_utils | loaded 54,117 examples from: data-bin/test_1201/iter1.oeis/train.src-tgt.src
+2024-12-01 18:22:34 | INFO | fairseq.data.data_utils | loaded 54,117 examples from: data-bin/test_1201/iter1.oeis/train.src-tgt.tgt
+2024-12-01 18:22:34 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter1.oeis train src-tgt 54117 examples
+2024-12-01 18:22:34 | INFO | fairseq_cli.train | done training in 0.0 seconds
+2024-12-01 18:22:35 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:22:35 | INFO | fairseq.utils | rank   0: capabilities =  7.5  ; total memory = 14.756 GB ; name = Tesla T4
+2024-12-01 18:22:35 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:22:35 | INFO | fairseq_cli.train | training on 1 devices (GPUs/TPUs)
+2024-12-01 18:22:35 | INFO | fairseq_cli.train | max tokens per device = None and max sentences per device = 256
+2024-12-01 18:22:35 | INFO | fairseq.trainer | Preparing to load checkpoint checkpoints/test_1201/iter1/model2/checkpoint_last.pt
+2024-12-01 18:22:35 | INFO | fairseq.trainer | Loaded checkpoint checkpoints/test_1201/iter1/model2/checkpoint_last.pt (epoch 11 @ 1066 updates)
+2024-12-01 18:22:35 | INFO | fairseq.trainer | loading train data for epoch 11
+2024-12-01 18:22:35 | INFO | fairseq.data.data_utils | loaded 27,058 examples from: data-bin/test_1201/iter1_2.oeis/train.src-tgt.src
+2024-12-01 18:22:35 | INFO | fairseq.data.data_utils | loaded 27,058 examples from: data-bin/test_1201/iter1_2.oeis/train.src-tgt.tgt
+2024-12-01 18:22:35 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter1_2.oeis train src-tgt 27058 examples
+2024-12-01 18:22:35 | INFO | fairseq_cli.train | done training in 0.0 seconds
+translation
+666
+{'_name': None, 'beam': 32, 'nbest': 32, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}
+translation
+666
+{'_name': None, 'beam': 32, 'nbest': 32, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}
+-----------------------------开始第 1 轮迭代-----------------------------
+-----------------------------开始处理数据！-----------------------------
+-----------------------------处理数据完成！-----------------------------
+-----------------------------开始训练！-----------------------------
+-----------------------------训练结束！-----------------------------
+-----------------------------开始束搜索解码！-----------------------------
+解码命令： CUDA_VISIBLE_DEVICES=0 fairseq-generate ./data-bin/decoder_seq_set/oeis_seq_split1/test_1                 --path checkpoints/test_1201/iter1/model1/checkpoint_best.pt                 --max-tokens 4096 --batch-size 128 --beam 32 --nbest 32 --results-path checkpoints/test_1201/iter1/result1 & CUDA_VISIBLE_DEVICES=1 fairseq-generate ./data-bin/decoder_seq_set/oeis_seq_split1/test_1                 --path checkpoints/test_1201/iter1/model2/checkpoint_best.pt                 --max-tokens 4096 --batch-size 128 --beam 32 --nbest 32 --results-path checkpoints/test_1201/iter1/result2
+-----------------------------束搜索结束！-----------------------------
+
+处理完成！
+-----------------------------开始检查！-----------------------------
+----start----
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 96, 'log_format': None, 'log_file': 'checkpoints/test_1201/iter2/file.log', 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': True, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': None, 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': True, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 256, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': 256, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 2, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.1, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.0004], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints/test_1201/iter2/model2', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': 1, 'no_save': False, 'no_epoch_checkpoints': True, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 0, 'input': '-'}, 'model': Namespace(_name='transformer', activation_dropout=0.0, activation_fn='relu', adam_betas=(0.9, 0.999), adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, aim_repo=None, aim_run_hash=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, arch='transformer', attention_dropout=0.0, azureml_logging=False, batch_size=256, batch_size_valid=256, best_checkpoint_metric='loss', bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_activations=False, checkpoint_shard_count=1, checkpoint_suffix='', clip_norm=0.1, combine_valid_subsets=None, continue_once=None, cpu=False, cpu_offload=False, criterion='cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/test_1201/iter2_2.oeis', data_buffer_size=10, dataset_impl=None, ddp_backend='pytorch_ddp', ddp_comm_hook='none', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layerdrop=0, decoder_layers=6, decoder_layers_to_keep=None, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_num_procs=1, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.2, ema_decay=0.9999, ema_fp32=False, ema_seed_model=None, ema_start_update=0, ema_update_freq=1, empty_cache_freq=0, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layerdrop=0, encoder_layers=6, encoder_layers_to_keep=None, encoder_learned_pos=False, encoder_normalize_before=False, eos=2, eval_bleu=False, eval_bleu_args='{}', eval_bleu_detok='space', eval_bleu_detok_args='{}', eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, finetune_from_model=None, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=True, fp16_adam_stats=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, fp32_reduce_scatter=False, gen_subset='test', gradient_as_bucket_view=False, grouped_shuffling=False, heartbeat_timeout=-1, ignore_unused_valid_subsets=False, keep_best_checkpoints=1, keep_interval_updates=-1, keep_interval_updates_pattern=-1, keep_last_epochs=-1, layernorm_embedding=False, left_pad_source=True, left_pad_target=False, load_alignments=False, load_checkpoint_on_all_dp_ranks=False, localsgd_frequency=3, log_file='checkpoints/test_1201/iter2/file.log', log_format=None, log_interval=96, lr=[0.0004], lr_scheduler='inverse_sqrt', max_epoch=2, max_tokens=None, max_tokens_valid=None, max_update=0, max_valid_steps=None, maximize_best_checkpoint_metric=False, memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_cross_attention=False, no_epoch_checkpoints=True, no_last_checkpoints=False, no_progress_bar=False, no_reshard_after_forward=False, no_save=False, no_save_optimizer_state=False, no_scale_embedding=False, no_seed_provided=False, no_token_positional_embeddings=False, not_fsdp_flatten_parameters=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, offload_activations=False, on_cpu_convert_precision=False, optimizer='adam', optimizer_overrides='{}', pad=1, patience=-1, pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, plasma_path='/tmp/plasma', profile=False, quant_noise_pq=0, quant_noise_pq_block_size=8, quant_noise_scalar=0, quantization_config_path=None, required_batch_size_multiple=8, required_seq_len_multiple=1, reset_dataloader=False, reset_logging=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='checkpoints/test_1201/iter2/model2', save_interval=1, save_interval_updates=0, scoring='bleu', seed=1, sentence_avg=False, shard_id=0, share_all_embeddings=False, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, skip_remainder_batch=False, slowmo_base_algorithm='localsgd', slowmo_momentum=None, source_lang=None, stop_min_lr=-1.0, stop_time_hours=0, store_ema=False, suppress_crashes=False, target_lang=None, task='translation', tensorboard_logdir=None, threshold_loss_scale=None, tie_adaptive_weights=False, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unk=3, update_epoch_batch_itr=False, update_freq=[1], update_ordered_indices_seed=False, upsample_primary=-1, use_bmuf=False, use_old_adam=False, use_plasma_view=False, use_sharded_state=False, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, wandb_project=None, warmup_init_lr=1e-07, warmup_updates=200, weight_decay=0.0, write_checkpoints_asynchronously=False, zero_sharding='none'), 'task': {'_name': 'translation', 'data': 'data-bin/test_1201/iter2_2.oeis', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': False}, 'optimizer': {'_name': 'adam', 'adam_betas': [0.9, 0.999], 'adam_eps': 1e-08, 'weight_decay': 0.0, 'use_old_adam': False, 'fp16_adam_stats': False, 'tpu': False, 'lr': [0.0004]}, 'lr_scheduler': {'_name': 'inverse_sqrt', 'warmup_updates': 200, 'warmup_init_lr': 1e-07, 'lr': [0.0004]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2024-12-01 18:24:52 | INFO | fairseq.tasks.translation | [src] dictionary: 9968 types
+2024-12-01 18:24:52 | INFO | fairseq.tasks.translation | [tgt] dictionary: 40 types
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 96, 'log_format': None, 'log_file': 'checkpoints/test_1201/iter2/file.log', 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': True, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': None, 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': True, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 256, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': 256, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 2, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.1, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.0004], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints/test_1201/iter2/model1', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': 1, 'no_save': False, 'no_epoch_checkpoints': True, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 0, 'input': '-'}, 'model': Namespace(_name='transformer', activation_dropout=0.0, activation_fn='relu', adam_betas=(0.9, 0.999), adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, aim_repo=None, aim_run_hash=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, arch='transformer', attention_dropout=0.0, azureml_logging=False, batch_size=256, batch_size_valid=256, best_checkpoint_metric='loss', bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_activations=False, checkpoint_shard_count=1, checkpoint_suffix='', clip_norm=0.1, combine_valid_subsets=None, continue_once=None, cpu=False, cpu_offload=False, criterion='cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/test_1201/iter2.oeis', data_buffer_size=10, dataset_impl=None, ddp_backend='pytorch_ddp', ddp_comm_hook='none', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layerdrop=0, decoder_layers=6, decoder_layers_to_keep=None, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_num_procs=1, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.2, ema_decay=0.9999, ema_fp32=False, ema_seed_model=None, ema_start_update=0, ema_update_freq=1, empty_cache_freq=0, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layerdrop=0, encoder_layers=6, encoder_layers_to_keep=None, encoder_learned_pos=False, encoder_normalize_before=False, eos=2, eval_bleu=False, eval_bleu_args='{}', eval_bleu_detok='space', eval_bleu_detok_args='{}', eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, finetune_from_model=None, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=True, fp16_adam_stats=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, fp32_reduce_scatter=False, gen_subset='test', gradient_as_bucket_view=False, grouped_shuffling=False, heartbeat_timeout=-1, ignore_unused_valid_subsets=False, keep_best_checkpoints=1, keep_interval_updates=-1, keep_interval_updates_pattern=-1, keep_last_epochs=-1, layernorm_embedding=False, left_pad_source=True, left_pad_target=False, load_alignments=False, load_checkpoint_on_all_dp_ranks=False, localsgd_frequency=3, log_file='checkpoints/test_1201/iter2/file.log', log_format=None, log_interval=96, lr=[0.0004], lr_scheduler='inverse_sqrt', max_epoch=2, max_tokens=None, max_tokens_valid=None, max_update=0, max_valid_steps=None, maximize_best_checkpoint_metric=False, memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_cross_attention=False, no_epoch_checkpoints=True, no_last_checkpoints=False, no_progress_bar=False, no_reshard_after_forward=False, no_save=False, no_save_optimizer_state=False, no_scale_embedding=False, no_seed_provided=False, no_token_positional_embeddings=False, not_fsdp_flatten_parameters=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, offload_activations=False, on_cpu_convert_precision=False, optimizer='adam', optimizer_overrides='{}', pad=1, patience=-1, pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, plasma_path='/tmp/plasma', profile=False, quant_noise_pq=0, quant_noise_pq_block_size=8, quant_noise_scalar=0, quantization_config_path=None, required_batch_size_multiple=8, required_seq_len_multiple=1, reset_dataloader=False, reset_logging=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='checkpoints/test_1201/iter2/model1', save_interval=1, save_interval_updates=0, scoring='bleu', seed=1, sentence_avg=False, shard_id=0, share_all_embeddings=False, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, skip_remainder_batch=False, slowmo_base_algorithm='localsgd', slowmo_momentum=None, source_lang=None, stop_min_lr=-1.0, stop_time_hours=0, store_ema=False, suppress_crashes=False, target_lang=None, task='translation', tensorboard_logdir=None, threshold_loss_scale=None, tie_adaptive_weights=False, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unk=3, update_epoch_batch_itr=False, update_freq=[1], update_ordered_indices_seed=False, upsample_primary=-1, use_bmuf=False, use_old_adam=False, use_plasma_view=False, use_sharded_state=False, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, wandb_project=None, warmup_init_lr=1e-07, warmup_updates=200, weight_decay=0.0, write_checkpoints_asynchronously=False, zero_sharding='none'), 'task': {'_name': 'translation', 'data': 'data-bin/test_1201/iter2.oeis', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': False}, 'optimizer': {'_name': 'adam', 'adam_betas': [0.9, 0.999], 'adam_eps': 1e-08, 'weight_decay': 0.0, 'use_old_adam': False, 'fp16_adam_stats': False, 'tpu': False, 'lr': [0.0004]}, 'lr_scheduler': {'_name': 'inverse_sqrt', 'warmup_updates': 200, 'warmup_init_lr': 1e-07, 'lr': [0.0004]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2024-12-01 18:24:52 | INFO | fairseq.tasks.translation | [src] dictionary: 9968 types
+2024-12-01 18:24:52 | INFO | fairseq.tasks.translation | [tgt] dictionary: 40 types
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | TransformerModel(
+(encoder): TransformerEncoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(9968, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerEncoderLayerBase(
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(dropout_module): FairseqDropout()
+(activation_dropout_module): FairseqDropout()
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+)
+(decoder): TransformerDecoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(40, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerDecoderLayerBase(
+(dropout_module): FairseqDropout()
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(activation_dropout_module): FairseqDropout()
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(encoder_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+(output_projection): Linear(in_features=512, out_features=40, bias=False)
+)
+)
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | task: TranslationTask
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | model: TransformerModel
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | criterion: CrossEntropyCriterion
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | num. shared model params: 49,283,072 (num. trained: 49,283,072)
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | num. expert model params: 0 (num. trained: 0)
+2024-12-01 18:24:52 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter2_2.oeis/valid.src-tgt.src
+2024-12-01 18:24:52 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter2_2.oeis/valid.src-tgt.tgt
+2024-12-01 18:24:52 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter2_2.oeis valid src-tgt 2000 examples
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | TransformerModel(
+(encoder): TransformerEncoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(9968, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerEncoderLayerBase(
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(dropout_module): FairseqDropout()
+(activation_dropout_module): FairseqDropout()
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+)
+(decoder): TransformerDecoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(40, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerDecoderLayerBase(
+(dropout_module): FairseqDropout()
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(activation_dropout_module): FairseqDropout()
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(encoder_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+(output_projection): Linear(in_features=512, out_features=40, bias=False)
+)
+)
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | task: TranslationTask
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | model: TransformerModel
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | criterion: CrossEntropyCriterion
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | num. shared model params: 49,283,072 (num. trained: 49,283,072)
+2024-12-01 18:24:52 | INFO | fairseq_cli.train | num. expert model params: 0 (num. trained: 0)
+2024-12-01 18:24:52 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter2.oeis/valid.src-tgt.src
+2024-12-01 18:24:52 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter2.oeis/valid.src-tgt.tgt
+2024-12-01 18:24:52 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter2.oeis valid src-tgt 2000 examples
+2024-12-01 18:24:53 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:24:53 | INFO | fairseq.utils | rank   0: capabilities =  7.5  ; total memory = 14.756 GB ; name = Tesla T4
+2024-12-01 18:24:53 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:24:53 | INFO | fairseq_cli.train | training on 1 devices (GPUs/TPUs)
+2024-12-01 18:24:53 | INFO | fairseq_cli.train | max tokens per device = None and max sentences per device = 256
+2024-12-01 18:24:53 | INFO | fairseq.trainer | Preparing to load checkpoint checkpoints/test_1201/iter2/model1/checkpoint_last.pt
+2024-12-01 18:24:53 | INFO | fairseq.trainer | No existing checkpoint found checkpoints/test_1201/iter2/model1/checkpoint_last.pt
+2024-12-01 18:24:53 | INFO | fairseq.trainer | loading train data for epoch 1
+2024-12-01 18:24:53 | INFO | fairseq.data.data_utils | loaded 36,669 examples from: data-bin/test_1201/iter2.oeis/train.src-tgt.src
+2024-12-01 18:24:53 | INFO | fairseq.data.data_utils | loaded 36,669 examples from: data-bin/test_1201/iter2.oeis/train.src-tgt.tgt
+2024-12-01 18:24:53 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter2.oeis train src-tgt 36669 examples
+2024-12-01 18:24:53 | INFO | fairseq.data.iterators | grouped total_num_itrs = 145
+2024-12-01 18:24:53 | INFO | fairseq.trainer | begin training epoch 1
+2024-12-01 18:24:53 | INFO | fairseq_cli.train | Start iterating over samples
+2024-12-01 18:24:54 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:24:54 | INFO | fairseq.utils | rank   0: capabilities =  7.5  ; total memory = 14.756 GB ; name = Tesla T4
+2024-12-01 18:24:54 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:24:54 | INFO | fairseq_cli.train | training on 1 devices (GPUs/TPUs)
+2024-12-01 18:24:54 | INFO | fairseq_cli.train | max tokens per device = None and max sentences per device = 256
+2024-12-01 18:24:54 | INFO | fairseq.trainer | Preparing to load checkpoint checkpoints/test_1201/iter2/model2/checkpoint_last.pt
+2024-12-01 18:24:54 | INFO | fairseq.trainer | No existing checkpoint found checkpoints/test_1201/iter2/model2/checkpoint_last.pt
+2024-12-01 18:24:54 | INFO | fairseq.trainer | loading train data for epoch 1
+2024-12-01 18:24:54 | INFO | fairseq.data.data_utils | loaded 18,334 examples from: data-bin/test_1201/iter2_2.oeis/train.src-tgt.src
+2024-12-01 18:24:54 | INFO | fairseq.data.data_utils | loaded 18,334 examples from: data-bin/test_1201/iter2_2.oeis/train.src-tgt.tgt
+2024-12-01 18:24:54 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter2_2.oeis train src-tgt 18334 examples
+2024-12-01 18:24:54 | INFO | fairseq.data.iterators | grouped total_num_itrs = 73
+2024-12-01 18:24:54 | INFO | fairseq.trainer | begin training epoch 1
+2024-12-01 18:24:54 | INFO | fairseq_cli.train | Start iterating over samples
+2024-12-01 18:24:55 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 64.0
+2024-12-01 18:24:55 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 64.0
+2024-12-01 18:24:55 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 32.0
+2024-12-01 18:24:59 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 32.0
+2024-12-01 18:25:09 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2024-12-01 18:25:10 | INFO | valid | epoch 001 | valid on 'valid' subset | loss 3.842 | ppl 14.34 | wps 34312.6 | wpb 2155.2 | bsz 250 | num_updates 71
+2024-12-01 18:25:10 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 1 @ 71 updates
+2024-12-01 18:25:10 | INFO | fairseq.trainer | Saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model2/checkpoint_best.pt
+2024-12-01 18:25:11 | INFO | fairseq.trainer | Finished saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model2/checkpoint_best.pt
+2024-12-01 18:25:12 | INFO | fairseq.checkpoint_utils | Saved checkpoint checkpoints/test_1201/iter2/model2/checkpoint_best.pt (epoch 1 @ 71 updates, score 3.842) (writing took 2.2655425053089857 seconds)
+2024-12-01 18:25:12 | INFO | fairseq_cli.train | end of epoch 1 (average epoch stats below)
+2024-12-01 18:25:12 | INFO | train | epoch 001 | loss 4.458 | ppl 21.97 | wps 8810.3 | ups 4.07 | wpb 2153.8 | bsz 251 | num_updates 71 | lr 0.000142065 | gnorm 8.498 | clip 100 | loss_scale 32 | train_wall 15 | gb_free 12.4 | wall 19
+2024-12-01 18:25:12 | INFO | fairseq.data.iterators | grouped total_num_itrs = 73
+2024-12-01 18:25:12 | INFO | fairseq.trainer | begin training epoch 2
+2024-12-01 18:25:12 | INFO | fairseq_cli.train | Start iterating over samples
+2024-12-01 18:25:14 | INFO | train_inner | epoch 001:     98 / 145 loss=4.232, ppl=18.79, wps=11324.4, ups=5.06, wpb=2243.8, bsz=251.3, num_updates=96, lr=0.000192052, gnorm=7.798, clip=100, loss_scale=32, train_wall=20, gb_free=11.9, wall=20
+2024-12-01 18:25:17 | INFO | train_inner | epoch 002:     25 / 73 loss=4.248, ppl=19.01, wps=9208.8, ups=4.22, wpb=2177.4, bsz=251.2, num_updates=96, lr=0.000192052, gnorm=8.108, clip=100, loss_scale=32, train_wall=20, gb_free=12, wall=24
+2024-12-01 18:25:20 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 16.0
+2024-12-01 18:25:23 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2024-12-01 18:25:24 | INFO | valid | epoch 001 | valid on 'valid' subset | loss 3.338 | ppl 10.11 | wps 34056.8 | wpb 2155.2 | bsz 250 | num_updates 142
+2024-12-01 18:25:24 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 1 @ 142 updates
+2024-12-01 18:25:24 | INFO | fairseq.trainer | Saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model1/checkpoint_best.pt
+2024-12-01 18:25:25 | INFO | fairseq.trainer | Finished saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model1/checkpoint_best.pt
+2024-12-01 18:25:26 | INFO | fairseq.checkpoint_utils | Saved checkpoint checkpoints/test_1201/iter2/model1/checkpoint_best.pt (epoch 1 @ 142 updates, score 3.338) (writing took 2.2663926165550947 seconds)
+2024-12-01 18:25:26 | INFO | fairseq_cli.train | end of epoch 1 (average epoch stats below)
+2024-12-01 18:25:26 | INFO | train | epoch 001 | loss 4.03 | ppl 16.34 | wps 9887 | ups 4.55 | wpb 2178.4 | bsz 252.8 | num_updates 142 | lr 0.000284029 | gnorm 7.106 | clip 100 | loss_scale 16 | train_wall 29 | gb_free 12.7 | wall 33
+2024-12-01 18:25:26 | INFO | fairseq.data.iterators | grouped total_num_itrs = 145
+2024-12-01 18:25:26 | INFO | fairseq.trainer | begin training epoch 2
+2024-12-01 18:25:26 | INFO | fairseq_cli.train | Start iterating over samples
+2024-12-01 18:25:27 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 16.0
+2024-12-01 18:25:27 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2024-12-01 18:25:28 | INFO | valid | epoch 002 | valid on 'valid' subset | loss 3.501 | ppl 11.32 | wps 33742.1 | wpb 2155.2 | bsz 250 | num_updates 143 | best_loss 3.501
+2024-12-01 18:25:28 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 2 @ 143 updates
+2024-12-01 18:25:28 | INFO | fairseq.trainer | Saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model2/checkpoint_best.pt
+2024-12-01 18:25:30 | INFO | fairseq.trainer | Finished saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model2/checkpoint_best.pt
+2024-12-01 18:25:31 | INFO | fairseq.checkpoint_utils | Saved checkpoint checkpoints/test_1201/iter2/model2/checkpoint_best.pt (epoch 2 @ 143 updates, score 3.501) (writing took 2.577579850330949 seconds)
+2024-12-01 18:25:31 | INFO | fairseq_cli.train | end of epoch 2 (average epoch stats below)
+2024-12-01 18:25:31 | INFO | train | epoch 002 | loss 3.52 | ppl 11.47 | wps 8326.6 | ups 3.88 | wpb 2147.9 | bsz 251.1 | num_updates 143 | lr 0.000286029 | gnorm 5.87 | clip 100 | loss_scale 16 | train_wall 15 | gb_free 12.5 | wall 37
+2024-12-01 18:25:31 | INFO | fairseq_cli.train | done training in 37.2 seconds
+2024-12-01 18:25:36 | INFO | train_inner | epoch 002:     50 / 145 loss=3.478, ppl=11.14, wps=8942.8, ups=4.25, wpb=2102.4, bsz=253.9, num_updates=192, lr=0.000384004, gnorm=5.168, clip=100, loss_scale=16, train_wall=19, gb_free=12.5, wall=43
+2024-12-01 18:25:55 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2024-12-01 18:25:56 | INFO | valid | epoch 002 | valid on 'valid' subset | loss 3.038 | ppl 8.21 | wps 33160.6 | wpb 2155.2 | bsz 250 | num_updates 287 | best_loss 3.038
+2024-12-01 18:25:56 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 2 @ 287 updates
+2024-12-01 18:25:56 | INFO | fairseq.trainer | Saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model1/checkpoint_best.pt
+2024-12-01 18:25:57 | INFO | fairseq.trainer | Finished saving checkpoint to /home/skm21/OEIS_Sequence_Formula_discovery-main/checkpoints/test_1201/iter2/model1/checkpoint_best.pt
+translation
+666
+{'_name': None, 'beam': 32, 'nbest': 32, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}
+2024-12-01 18:25:58 | INFO | fairseq.checkpoint_utils | Saved checkpoint checkpoints/test_1201/iter2/model1/checkpoint_best.pt (epoch 2 @ 287 updates, score 3.038) (writing took 2.3067854419350624 seconds)
+translation
+666
+{'_name': None, 'beam': 32, 'nbest': 32, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}
+2024-12-01 18:25:58 | INFO | fairseq_cli.train | end of epoch 2 (average epoch stats below)
+2024-12-01 18:25:58 | INFO | train | epoch 002 | loss 3.349 | ppl 10.19 | wps 9809.5 | ups 4.48 | wpb 2191 | bsz 252.9 | num_updates 287 | lr 0.000333914 | gnorm 4.109 | clip 100 | loss_scale 16 | train_wall 29 | gb_free 12.2 | wall 65
+2024-12-01 18:25:58 | INFO | fairseq_cli.train | done training in 65.1 seconds
+检验第0行的seq
+检验第1000行的seq
+-----end-----
+检测seq时间： 0:00:03.295065
+-----------------------------检查结束！-----------------------------
+A301298
+A251672
+A079262
+A023436
+res: 0.2675
+res: 0.1293
+res: 0.066
+-----------------------------第 1 轮迭代结束-----------------------------
+-----------------------------开始第 2 轮迭代-----------------------------
+-----------------------------开始处理数据！-----------------------------
+-----------------------------处理数据完成！-----------------------------
+-----------------------------开始训练！-----------------------------
+-----------------------------训练结束！-----------------------------
+-----------------------------开始束搜索解码！-----------------------------
+解码命令： CUDA_VISIBLE_DEVICES=0 fairseq-generate ./data-bin/decoder_seq_set/oeis_seq_split1/test_1                 --path checkpoints/test_1201/iter2/model1/checkpoint_best.pt                 --max-tokens 4096 --batch-size 128 --beam 32 --nbest 32 --results-path checkpoints/test_1201/iter2/result1 & CUDA_VISIBLE_DEVICES=1 fairseq-generate ./data-bin/decoder_seq_set/oeis_seq_split1/test_1                 --path checkpoints/test_1201/iter2/model2/checkpoint_best.pt                 --max-tokens 4096 --batch-size 128 --beam 32 --nbest 32 --results-path checkpoints/test_1201/iter2/result2
+-----------------------------束搜索结束！-----------------------------
+
+处理完成！
+-----------------------------开始检查！-----------------------------
+----start----
+2024-12-01 18:27:42 | INFO | fairseq_cli.train | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 96, 'log_format': None, 'log_file': 'checkpoints/test_1201/iter3/file.log', 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': True, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': None, 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': True, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 256, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': 256, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 2, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.1, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.0004], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints/test_1201/iter3/model1', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': 1, 'no_save': False, 'no_epoch_checkpoints': True, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 0, 'input': '-'}, 'model': Namespace(_name='transformer', activation_dropout=0.0, activation_fn='relu', adam_betas=(0.9, 0.999), adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, aim_repo=None, aim_run_hash=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, arch='transformer', attention_dropout=0.0, azureml_logging=False, batch_size=256, batch_size_valid=256, best_checkpoint_metric='loss', bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_activations=False, checkpoint_shard_count=1, checkpoint_suffix='', clip_norm=0.1, combine_valid_subsets=None, continue_once=None, cpu=False, cpu_offload=False, criterion='cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/test_1201/iter3.oeis', data_buffer_size=10, dataset_impl=None, ddp_backend='pytorch_ddp', ddp_comm_hook='none', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layerdrop=0, decoder_layers=6, decoder_layers_to_keep=None, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_num_procs=1, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.2, ema_decay=0.9999, ema_fp32=False, ema_seed_model=None, ema_start_update=0, ema_update_freq=1, empty_cache_freq=0, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layerdrop=0, encoder_layers=6, encoder_layers_to_keep=None, encoder_learned_pos=False, encoder_normalize_before=False, eos=2, eval_bleu=False, eval_bleu_args='{}', eval_bleu_detok='space', eval_bleu_detok_args='{}', eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, finetune_from_model=None, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=True, fp16_adam_stats=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, fp32_reduce_scatter=False, gen_subset='test', gradient_as_bucket_view=False, grouped_shuffling=False, heartbeat_timeout=-1, ignore_unused_valid_subsets=False, keep_best_checkpoints=1, keep_interval_updates=-1, keep_interval_updates_pattern=-1, keep_last_epochs=-1, layernorm_embedding=False, left_pad_source=True, left_pad_target=False, load_alignments=False, load_checkpoint_on_all_dp_ranks=False, localsgd_frequency=3, log_file='checkpoints/test_1201/iter3/file.log', log_format=None, log_interval=96, lr=[0.0004], lr_scheduler='inverse_sqrt', max_epoch=2, max_tokens=None, max_tokens_valid=None, max_update=0, max_valid_steps=None, maximize_best_checkpoint_metric=False, memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_cross_attention=False, no_epoch_checkpoints=True, no_last_checkpoints=False, no_progress_bar=False, no_reshard_after_forward=False, no_save=False, no_save_optimizer_state=False, no_scale_embedding=False, no_seed_provided=False, no_token_positional_embeddings=False, not_fsdp_flatten_parameters=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, offload_activations=False, on_cpu_convert_precision=False, optimizer='adam', optimizer_overrides='{}', pad=1, patience=-1, pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, plasma_path='/tmp/plasma', profile=False, quant_noise_pq=0, quant_noise_pq_block_size=8, quant_noise_scalar=0, quantization_config_path=None, required_batch_size_multiple=8, required_seq_len_multiple=1, reset_dataloader=False, reset_logging=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='checkpoints/test_1201/iter3/model1', save_interval=1, save_interval_updates=0, scoring='bleu', seed=1, sentence_avg=False, shard_id=0, share_all_embeddings=False, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, skip_remainder_batch=False, slowmo_base_algorithm='localsgd', slowmo_momentum=None, source_lang=None, stop_min_lr=-1.0, stop_time_hours=0, store_ema=False, suppress_crashes=False, target_lang=None, task='translation', tensorboard_logdir=None, threshold_loss_scale=None, tie_adaptive_weights=False, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unk=3, update_epoch_batch_itr=False, update_freq=[1], update_ordered_indices_seed=False, upsample_primary=-1, use_bmuf=False, use_old_adam=False, use_plasma_view=False, use_sharded_state=False, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, wandb_project=None, warmup_init_lr=1e-07, warmup_updates=200, weight_decay=0.0, write_checkpoints_asynchronously=False, zero_sharding='none'), 'task': {'_name': 'translation', 'data': 'data-bin/test_1201/iter3.oeis', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': False}, 'optimizer': {'_name': 'adam', 'adam_betas': [0.9, 0.999], 'adam_eps': 1e-08, 'weight_decay': 0.0, 'use_old_adam': False, 'fp16_adam_stats': False, 'tpu': False, 'lr': [0.0004]}, 'lr_scheduler': {'_name': 'inverse_sqrt', 'warmup_updates': 200, 'warmup_init_lr': 1e-07, 'lr': [0.0004]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2024-12-01 18:27:42 | INFO | fairseq.tasks.translation | [src] dictionary: 9968 types
+2024-12-01 18:27:42 | INFO | fairseq.tasks.translation | [tgt] dictionary: 40 types
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 96, 'log_format': None, 'log_file': 'checkpoints/test_1201/iter3/file.log', 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': True, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': None, 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': True, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 256, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': 256, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 2, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.1, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.0004], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints/test_1201/iter3/model2', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': 1, 'no_save': False, 'no_epoch_checkpoints': True, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 0, 'input': '-'}, 'model': Namespace(_name='transformer', activation_dropout=0.0, activation_fn='relu', adam_betas=(0.9, 0.999), adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, aim_repo=None, aim_run_hash=None, all_gather_list_size=16384, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, arch='transformer', attention_dropout=0.0, azureml_logging=False, batch_size=256, batch_size_valid=256, best_checkpoint_metric='loss', bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_activations=False, checkpoint_shard_count=1, checkpoint_suffix='', clip_norm=0.1, combine_valid_subsets=None, continue_once=None, cpu=False, cpu_offload=False, criterion='cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/test_1201/iter3_2.oeis', data_buffer_size=10, dataset_impl=None, ddp_backend='pytorch_ddp', ddp_comm_hook='none', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layerdrop=0, decoder_layers=6, decoder_layers_to_keep=None, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_num_procs=1, distributed_port=-1, distributed_rank=0, distributed_world_size=1, dropout=0.2, ema_decay=0.9999, ema_fp32=False, ema_seed_model=None, ema_start_update=0, ema_update_freq=1, empty_cache_freq=0, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layerdrop=0, encoder_layers=6, encoder_layers_to_keep=None, encoder_learned_pos=False, encoder_normalize_before=False, eos=2, eval_bleu=False, eval_bleu_args='{}', eval_bleu_detok='space', eval_bleu_detok_args='{}', eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, finetune_from_model=None, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=True, fp16_adam_stats=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, fp32_reduce_scatter=False, gen_subset='test', gradient_as_bucket_view=False, grouped_shuffling=False, heartbeat_timeout=-1, ignore_unused_valid_subsets=False, keep_best_checkpoints=1, keep_interval_updates=-1, keep_interval_updates_pattern=-1, keep_last_epochs=-1, layernorm_embedding=False, left_pad_source=True, left_pad_target=False, load_alignments=False, load_checkpoint_on_all_dp_ranks=False, localsgd_frequency=3, log_file='checkpoints/test_1201/iter3/file.log', log_format=None, log_interval=96, lr=[0.0004], lr_scheduler='inverse_sqrt', max_epoch=2, max_tokens=None, max_tokens_valid=None, max_update=0, max_valid_steps=None, maximize_best_checkpoint_metric=False, memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, model_parallel_size=1, no_cross_attention=False, no_epoch_checkpoints=True, no_last_checkpoints=False, no_progress_bar=False, no_reshard_after_forward=False, no_save=False, no_save_optimizer_state=False, no_scale_embedding=False, no_seed_provided=False, no_token_positional_embeddings=False, not_fsdp_flatten_parameters=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, offload_activations=False, on_cpu_convert_precision=False, optimizer='adam', optimizer_overrides='{}', pad=1, patience=-1, pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, plasma_path='/tmp/plasma', profile=False, quant_noise_pq=0, quant_noise_pq_block_size=8, quant_noise_scalar=0, quantization_config_path=None, required_batch_size_multiple=8, required_seq_len_multiple=1, reset_dataloader=False, reset_logging=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='checkpoints/test_1201/iter3/model2', save_interval=1, save_interval_updates=0, scoring='bleu', seed=1, sentence_avg=False, shard_id=0, share_all_embeddings=False, share_decoder_input_output_embed=False, skip_invalid_size_inputs_valid_test=False, skip_remainder_batch=False, slowmo_base_algorithm='localsgd', slowmo_momentum=None, source_lang=None, stop_min_lr=-1.0, stop_time_hours=0, store_ema=False, suppress_crashes=False, target_lang=None, task='translation', tensorboard_logdir=None, threshold_loss_scale=None, tie_adaptive_weights=False, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unk=3, update_epoch_batch_itr=False, update_freq=[1], update_ordered_indices_seed=False, upsample_primary=-1, use_bmuf=False, use_old_adam=False, use_plasma_view=False, use_sharded_state=False, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, wandb_project=None, warmup_init_lr=1e-07, warmup_updates=200, weight_decay=0.0, write_checkpoints_asynchronously=False, zero_sharding='none'), 'task': {'_name': 'translation', 'data': 'data-bin/test_1201/iter3_2.oeis', 'source_lang': None, 'target_lang': None, 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': False}, 'optimizer': {'_name': 'adam', 'adam_betas': [0.9, 0.999], 'adam_eps': 1e-08, 'weight_decay': 0.0, 'use_old_adam': False, 'fp16_adam_stats': False, 'tpu': False, 'lr': [0.0004]}, 'lr_scheduler': {'_name': 'inverse_sqrt', 'warmup_updates': 200, 'warmup_init_lr': 1e-07, 'lr': [0.0004]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2024-12-01 18:27:43 | INFO | fairseq.tasks.translation | [src] dictionary: 9968 types
+2024-12-01 18:27:43 | INFO | fairseq.tasks.translation | [tgt] dictionary: 40 types
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | TransformerModel(
+(encoder): TransformerEncoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(9968, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerEncoderLayerBase(
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(dropout_module): FairseqDropout()
+(activation_dropout_module): FairseqDropout()
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+)
+(decoder): TransformerDecoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(40, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerDecoderLayerBase(
+(dropout_module): FairseqDropout()
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(activation_dropout_module): FairseqDropout()
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(encoder_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+(output_projection): Linear(in_features=512, out_features=40, bias=False)
+)
+)
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | task: TranslationTask
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | model: TransformerModel
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | criterion: CrossEntropyCriterion
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | num. shared model params: 49,283,072 (num. trained: 49,283,072)
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | num. expert model params: 0 (num. trained: 0)
+2024-12-01 18:27:43 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter3.oeis/valid.src-tgt.src
+2024-12-01 18:27:43 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter3.oeis/valid.src-tgt.tgt
+2024-12-01 18:27:43 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter3.oeis valid src-tgt 2000 examples
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | TransformerModel(
+(encoder): TransformerEncoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(9968, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerEncoderLayerBase(
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(dropout_module): FairseqDropout()
+(activation_dropout_module): FairseqDropout()
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+)
+(decoder): TransformerDecoderBase(
+(dropout_module): FairseqDropout()
+(embed_tokens): Embedding(40, 512, padding_idx=1)
+(embed_positions): SinusoidalPositionalEmbedding()
+(layers): ModuleList(
+(0-5): 6 x TransformerDecoderLayerBase(
+(dropout_module): FairseqDropout()
+(self_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(activation_dropout_module): FairseqDropout()
+(self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(encoder_attn): MultiheadAttention(
+(dropout_module): FairseqDropout()
+(k_proj): Linear(in_features=512, out_features=512, bias=True)
+(v_proj): Linear(in_features=512, out_features=512, bias=True)
+(q_proj): Linear(in_features=512, out_features=512, bias=True)
+(out_proj): Linear(in_features=512, out_features=512, bias=True)
+)
+(encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+(fc1): Linear(in_features=512, out_features=2048, bias=True)
+(fc2): Linear(in_features=2048, out_features=512, bias=True)
+(final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+)
+(output_projection): Linear(in_features=512, out_features=40, bias=False)
+)
+)
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | task: TranslationTask
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | model: TransformerModel
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | criterion: CrossEntropyCriterion
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | num. shared model params: 49,283,072 (num. trained: 49,283,072)
+2024-12-01 18:27:43 | INFO | fairseq_cli.train | num. expert model params: 0 (num. trained: 0)
+2024-12-01 18:27:43 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter3_2.oeis/valid.src-tgt.src
+2024-12-01 18:27:43 | INFO | fairseq.data.data_utils | loaded 2,000 examples from: data-bin/test_1201/iter3_2.oeis/valid.src-tgt.tgt
+2024-12-01 18:27:43 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter3_2.oeis valid src-tgt 2000 examples
+2024-12-01 18:27:44 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:27:44 | INFO | fairseq.utils | rank   0: capabilities =  7.5  ; total memory = 14.756 GB ; name = Tesla T4
+2024-12-01 18:27:44 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:27:44 | INFO | fairseq_cli.train | training on 1 devices (GPUs/TPUs)
+2024-12-01 18:27:44 | INFO | fairseq_cli.train | max tokens per device = None and max sentences per device = 256
+2024-12-01 18:27:44 | INFO | fairseq.trainer | Preparing to load checkpoint checkpoints/test_1201/iter3/model1/checkpoint_last.pt
+2024-12-01 18:27:44 | INFO | fairseq.trainer | No existing checkpoint found checkpoints/test_1201/iter3/model1/checkpoint_last.pt
+2024-12-01 18:27:44 | INFO | fairseq.trainer | loading train data for epoch 1
+2024-12-01 18:27:44 | INFO | fairseq.data.data_utils | loaded 36,763 examples from: data-bin/test_1201/iter3.oeis/train.src-tgt.src
+2024-12-01 18:27:44 | INFO | fairseq.data.data_utils | loaded 36,763 examples from: data-bin/test_1201/iter3.oeis/train.src-tgt.tgt
+2024-12-01 18:27:44 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter3.oeis train src-tgt 36763 examples
+2024-12-01 18:27:44 | INFO | fairseq.data.iterators | grouped total_num_itrs = 145
+2024-12-01 18:27:44 | INFO | fairseq.trainer | begin training epoch 1
+2024-12-01 18:27:44 | INFO | fairseq_cli.train | Start iterating over samples
+2024-12-01 18:27:45 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:27:45 | INFO | fairseq.utils | rank   0: capabilities =  7.5  ; total memory = 14.756 GB ; name = Tesla T4
+2024-12-01 18:27:45 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2024-12-01 18:27:45 | INFO | fairseq_cli.train | training on 1 devices (GPUs/TPUs)
+2024-12-01 18:27:45 | INFO | fairseq_cli.train | max tokens per device = None and max sentences per device = 256
+2024-12-01 18:27:45 | INFO | fairseq.trainer | Preparing to load checkpoint checkpoints/test_1201/iter3/model2/checkpoint_last.pt
+2024-12-01 18:27:45 | INFO | fairseq.trainer | No existing checkpoint found checkpoints/test_1201/iter3/model2/checkpoint_last.pt
+2024-12-01 18:27:45 | INFO | fairseq.trainer | loading train data for epoch 1
+2024-12-01 18:27:45 | INFO | fairseq.data.data_utils | loaded 18,381 examples from: data-bin/test_1201/iter3_2.oeis/train.src-tgt.src
+2024-12-01 18:27:45 | INFO | fairseq.data.data_utils | loaded 18,381 examples from: data-bin/test_1201/iter3_2.oeis/train.src-tgt.tgt
+2024-12-01 18:27:45 | INFO | fairseq.tasks.translation | data-bin/test_1201/iter3_2.oeis train src-tgt 18381 examples
+2024-12-01 18:27:45 | INFO | fairseq.data.iterators | grouped total_num_itrs = 73
+2024-12-01 18:27:45 | INFO | fairseq.trainer | begin training epoch 1
+2024-12-01 18:27:45 | INFO | fairseq_cli.train | Start iterating over samples
+2024-12-01 18:27:45 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 64.0
+2024-12-01 18:27:46 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 64.0
+2024-12-01 18:27:51 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 32.0
+2024-12-01 18:27:55 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 32.0
+2024-12-01 18:27:58 | INFO | fairseq.trainer | NOTE: gradient overflow detected, ignoring gradient, setting loss scale to: 16.0
+2024-12-01 18:28:01 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2024-12-01 18:28:04 | INFO | train_inner | epoch 001:     99 / 145 loss=4.233, ppl=18.81, wps=11111.1, ups=4.95, wpb=2252.7, bsz=252.3, num_updates=96, lr=0.000192052, gnorm=7.862, clip=100, loss_scale=16, train_wall=20, gb_free=12.7, wall=21
+2024-12-01 18:28:14 | INFO | fairseq_cli.train | begin validation on "valid" subset

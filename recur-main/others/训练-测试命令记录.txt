@@ -1,0 +1,50 @@
+训练500万条数据命令 lr=0.00021：
+CUDA_VISIBLE_DEVICES=2 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_lr0.00021 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+训练500万条数据命令 lr=0.0005：
+CUDA_VISIBLE_DEVICES=4 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_lr0.0005 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+训练1000万条数据命令 lr=0.00021：
+CUDA_VISIBLE_DEVICES=3 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_lr0.001 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+
+训练1000万条数据命令 lr=0.00021：
+CUDA_VISIBLE_DEVICES=3 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/1000M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=1000M_固定训练数据_lr0.00021 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=000000
+
+export NGPU=2; CUDA_VISIBLE_DEVICES=2,3 python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_oneGPU --batch_size=128tmu  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+
+训练10000条自动生成数据命令（每个epoch的数据都不一样）
+python train.py --exp_name=train --exp_id=10000_不固定训练数据 --batch_size=64  --max_epoch=250 --eval_only=False --epoch_size=10000
+
+训练固定的一万条数据，看看loss变化情况
+python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/10000.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=10000_固定训练数据2 --batch_size=64  --max_epoch=250 --eval_only=False --epoch_size=10000
+
+测试训练固定数据的模型对训练数据本身的拟合情况
+python train.py --exp_name=test --exp_id=测试10000_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/10000_固定训练数据2 --eval_data=/home/skm21/recur-main/data/train/10000.txt
+python train.py --exp_name=test --exp_id=测试500M_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据 --eval_data=/home/skm21/recur-main/data/train/10000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+
+测试检查点对验证集的acc（reload_data时，代码出了点问题，导致验证集没有正确测试，需要再测一下）
+python train.py --exp_name=test --exp_id=测试500M_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据 --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+
+500M固定训练数据——重载之后的检查点，测试命令
+python train.py --exp_name=test --exp_id=测试500M_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据-重载检查点 --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+python train.py  --eval_only=True  --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+
+
+测试oeis数据集
+python train.py --exp_name=test --exp_id=500M_固定训练数据-测试oeis前10000条  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据 --eval_data=/home/skm21/recur-main/data/valid/oeis_10000.json
+python train.py --exp_name=test --exp_id=500Mb_data_固定训练数据-测试oeis前10000条  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data-重载检查点/ --eval_data=/home/skm21/recur-main/data/valid/oeis_10000.json
+python train.py --exp_name=test --exp_id=500M_固定训练数据-测试oeis前10000条  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据-重载检查点 --eval_data=/home/skm21/recur-main/data/valid/oeis_10000.json
+
+
+
+重载检查点：
+python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据-重载检查点 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000 --reload_checkpoint=/home/skm21/recur-main/train/500M_固定训练数据-重载检查点/checkpoint.pth
+python train.py --exp_name=train --exp_id=500M_data-重载检查点 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000 --reload_checkpoint=/home/skm21/recur-main/train/500M_data-重载检查点/checkpoint.pth
+
+
+生成数据命令 ：
+python train.py --exp_name=data --exp_id=1000M --batch_size=100  --max_epoch=1 --eval_only=False --epoch_size=10000000 --export_data=True

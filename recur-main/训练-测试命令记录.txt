@@ -1,0 +1,135 @@
+训练500万条数据命令 lr=0.00021：
+CUDA_VISIBLE_DEVICES=2 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_lr0.00021 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+训练500万条数据命令 lr=0.0005：
+CUDA_VISIBLE_DEVICES=4 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_lr0.0005 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+训练1000万条数据命令 lr=0.00021：
+CUDA_VISIBLE_DEVICES=3 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_lr0.001 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+
+训练1000万条数据命令 lr=0.00021：
+CUDA_VISIBLE_DEVICES=3 python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/1000M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=1000M_固定训练数据_lr0.00021 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=000000
+
+export NGPU=2; CUDA_VISIBLE_DEVICES=2,3 python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据_oneGPU --batch_size=128tmu  --max_epoch=250 --eval_only=False --epoch_size=5000000
+
+
+训练5M条自动生成数据命令（每个epoch的数据都不一样）
+export CUDA_VISIBLE_DEVICES=3; python train.py --exp_name=train --exp_id=5M_不固定训练数据_lr0.00021 --batch_size=128  --max_epoch=250 --reload_data="" --eval_only=False --epoch_size=5000000
+export CUDA_VISIBLE_DEVICES=5; python train.py --exp_name=train --exp_id=5M_不固定训练数据_lr0.0001 --batch_size=128 --max_epoch=250 --reload_data="" --eval_only=False --epoch_size=5000000
+
+
+
+多卡训练
+export CUDA_VISIBLE_DEVICES=3,5; export NGPU=2; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --exp_name=train --exp_id=5M_不固定训练数据_lr0.00021 --batch_size=256 --max_epoch=250 --reload_data="" --eval_only=False --epoch_size=5000000
+export CUDA_VISIBLE_DEVICES=2,5; export NGPU=2; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --exp_name=train --exp_id=5M_不固定训练数据_lr0.00021 --batch_size=256 --max_epoch=250 --reload_data="" --eval_only=False --epoch_size=5000000
+
+CUDA_VISIBLE_DEVICES=3,5 python -m torch.distributed.launch --nproc_per_node=2 train.py --exp_name=train --exp_id=5M_不固定训练数据_lr0.00021 --batch_size=256 --max_epoch=250 --reload_data="" --eval_only=False --epoch_size=5000000
+CUDA_VISIBLE_DEVICES=2,3,5 python -m torch.distributed.launch --nproc_per_node=3 train.py --exp_name=train --exp_id=5M_不固定训练数据_lr0.00021 --batch_size=256 --max_epoch=250 --reload_data="" --eval_only=False --epoch_size=5000000
+
+
+训练固定的一万条数据，看看loss变化情况
+python train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/10000.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=10000_固定训练数据2 --batch_size=64  --max_epoch=250 --eval_only=False --epoch_size=10000
+
+测试训练固定数据的模型对训练数据本身的拟合情况
+python train.py --exp_name=test --exp_id=测试10000_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/10000_固定训练数据2 --eval_data=/home/skm21/recur-main/data/train/10000.txt
+python train.py --exp_name=test --exp_id=测试500M_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据 --eval_data=/home/skm21/recur-main/data/train/10000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+
+测试检查点对验证集的acc（reload_data时，代码出了点问题，导致验证集没有正确测试，需要再测一下）
+python train.py --exp_name=test --exp_id=测试500M_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据 --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data --eval_data=/home/skm21/recur-main/data/test/10000.txt
+5M_固定训练数据_lr0.0021_6gpu
+
+利用periodic-8.pth 文件进行批量测试命令  更改train.py代码 第402行
+python train.py --exp_name=test --exp_id=测试5M_固定训练数据_lr0.0021_6gpu  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/5M_固定训练数据_lr0.0021_6gpu --periodic_i_pth=periodic-8.pth --eval_data=/home/skm21/recur-main/data/test/10000.txt
+
+
+
+
+500M固定训练数据——重载之后的检查点，测试命令
+python train.py --exp_name=test --exp_id=测试500M_固定训练数据  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据-重载检查点 --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data-重载检查点 --eval_data=/home/skm21/recur-main/data/valid/1000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据_lr0.001 --eval_data=/home/skm21/recur-main/data/test/10000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据_lr0.0005_3 --eval_data=/home/skm21/recur-main/data/test/10000.txt
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据_lr0.0005_3 --eval_data=/home/skm21/recur-main/data/test/10000_delete_same_term.json
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据_lr0.0005_3 --eval_data=/home/skm21/recur-main/data/1M_2/data.prefix
+python train.py --exp_name=test --exp_id=测试500M_data  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据_lr0.0005_3 --eval_data=/home/skm21/recur-main/data/1M_3/data.prefix
+
+
+
+
+测试oeis数据集
+python train.py --exp_name=test --exp_id=500M_固定训练数据-测试oeis前10000条  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据 --eval_data=/home/skm21/recur-main/data/valid/oeis_10000.json
+python train.py --exp_name=test --exp_id=500Mb_data_固定训练数据-测试oeis前10000条  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_data-重载检查点/ --eval_data=/home/skm21/recur-main/data/valid/oeis_10000.json
+python train.py --exp_name=test --exp_id=500M_固定训练数据-测试oeis前10000条  --eval_only=True --eval_from_exp=/home/skm21/recur-main/train/500M_固定训练数据-重载检查点 --eval_data=/home/skm21/recur-main/data/valid/oeis_10000.json
+
+
+
+重载检查点：
+python train.py --reload_data=z`/home/skm21/recur-main/data/train/500M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=500M_固定训练数据-重载检查点 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000 --reload_checkpoint=/home/skm21/recur-main/train/500M_固定训练数据-重载检查点/checkpoint.pth
+python train.py --exp_name=train --exp_id=500M_data-重载检查点 --batch_size=128  --max_epoch=250 --eval_only=False --epoch_size=5000000 --reload_checkpoint=/home/skm21/recur-main/train/500M_data-重载检查点/checkpoint.pth
+
+
+生成数据命令 ：
+CUDA_VISIBLE_DEVICES=2 python train.py --exp_name=data --exp_id=5M*16 --batch_size=128  --max_epoch=1 --eval_only=False --epoch_size=80000000 --export_data=True
+python train.py --exp_name=data --exp_id=1M --batch_size=100  --max_epoch=1 --eval_only=False --epoch_size=10000 --export_data=True
+python train.py --exp_name=data --exp_id=1M_2 --batch_size=100  --max_epoch=1 --eval_only=False --epoch_size=10000 --export_data=True
+python train.py --exp_name=data --exp_id=1M_3 --batch_size=100  --max_epoch=1 --eval_only=False --epoch_size=10000 --export_data=True
+export CUDA_VISIBLE_DEVICES=2,3,5; export NGPU=3; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --exp_name=data --exp_id=5M*16_2 --batch_size=512  --max_epoch=1 --eval_only=False --epoch_size=75000000 --export_data=True
+export CUDA_VISIBLE_DEVICES=1,2,3; export NGPU=3; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --exp_name=data --exp_id=200g --batch_size=512  --max_epoch=1 --eval_only=False --epoch_size=200000000 --export_data=True
+
+
+
+多卡
+
+export CUDA_VISIBLE_DEVICES=0,1,2,3; export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main//data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.00021_4gpu --max_epoch=250 --eval_only=False --epoch_size=5000000 --accumulate_gradients=2 --batch_size=256
+export CUDA_VISIBLE_DEVICES=4,5,6,7; export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU --master_port 29506 train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train  --exp_id=5M_固定训练数据_lr0.0021_4gpu --max_epoch=250 --eval_only=False --epoch_size=5000000 --batch_size=128
+
+212
+export CUDA_VISIBLE_DEVICES=0,1,2,3; export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main//data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.00021_2gpu --max_epoch=250 --eval_only=False --epoch_size=5000000 --accumulate_gradients=4 --batch_size=128
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5; export NGPU=6; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main//data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.0021_6gpu --max_epoch=250 --eval_only=False --epoch_size=5000000 --amp=-1 --accumulate_gradients=1 --batch_size=512
+export CUDA_VISIBLE_DEVICES=0,1 export NGPU=2; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main//data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.00021_2gpu --max_epoch=250 --eval_only=False --epoch_size=5000000 --amp=-1 --accumulate_gradients=1 --batch_size=128
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5; export NGPU=6; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=test_ddp --max_epoch=250 --eval_only=False --epoch_size=5000000 --amp=-1 --accumulate_gradients=1 --batch_size=512
+export CUDA_VISIBLE_DEVICES=0,1,3,4; export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=test_ddp6.2 --max_epoch=5 --eval_only=False --epoch_size=5000000 --amp=0 --accumulate_gradients=2 --batch_size=256
+export CUDA_VISIBLE_DEVICES=0; export NGPU=1; python -m torch.distributed.launch --nproc_per_node=$NGPU  python train.py --reload_data=recurrence,/home/skm21/recur-main/data/test/10000.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=test_ddp7.1 --max_epoch=5 --eval_only=False --epoch_size=10000 --amp=-1 --accumulate_gradients=1 --batch_size=128
+export CUDA_VISIBLE_DEVICES=0,1 export NGPU=2; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/test/10000.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=test_ddp8.9 --max_epoch=250 --eval_only=False --epoch_size=5000 --amp=-1 --accumulate_gradients=1 --batch_size=100
+export CUDA_VISIBLE_DEVICES=0,3,4,5 export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/test/10000.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=test_ddp8.10 --max_epoch=250 --eval_only=False --epoch_size=2500 --amp=-1 --accumulate_gradients=1 --batch_size=100
+export CUDA_VISIBLE_DEVICES=1,3,4 export NGPU=3; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.0021_3gpu --max_epoch=250 --eval_only=False --epoch_size=1666666 --amp=0 --accumulate_gradients=2 --batch_size=256
+
+
+204
+export CUDA_VISIBLE_DEVICES=0,1,2,3; export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/data/skm21/recur-main/data/train/5M.txt,/data/skm21/recur-main//data/valid/1000.txt,/data/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.000021_4gpu --max_epoch=250 --eval_only=False --accumulate_gradients=2 --epoch_size=5000000 --batch_size=512
+
+211
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5; export NGPU=6; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/kercing/skm21/recur-main/data/train/5M.txt,/kercing/skm21/recur-main//data/valid/1000.txt,/kercing/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.000021_6gpu --max_epoch=250 --eval_only=False --amp=0 --accumulate_gradients=2 --epoch_size=5000000 --batch_size=256
+export CUDA_VISIBLE_DEVICES=0; export NGPU=1; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/kercing/skm21/recur-main/data/train/5M.txt,/kercing/skm21/recur-main//data/valid/1000.txt,/kercing/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.000021_4gpu --max_epoch=250 --eval_only=False --accumulate_gradients=1 --epoch_size=5000000 --batch_size=512
+export CUDA_VISIBLE_DEVICES=0,1; export NGPU=2; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/kercing/skm21/recur-main/data/train/5M.txt,/kercing/skm21/recur-main//data/valid/1000.txt,/kercing/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.000021_2gpu --max_epoch=250 --eval_only=False --amp=0 --accumulate_gradients=2 --epoch_size=5000000 --batch_size=256
+
+214
+export CUDA_VISIBLE_DEVICES=0,3,4,5; export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main//data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=test_ddp --max_epoch=250 --eval_only=False --epoch_size=5000000 --accumulate_gradients=1 --amp=-1 --batch_size=512
+export CUDA_VISIBLE_DEVICES=0,3,4,5 export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.0021_4gpu --max_epoch=250 --eval_only=False --epoch_size=1250000 --amp=0 --accumulate_gradients=2 --batch_size=256
+export CUDA_VISIBLE_DEVICES=2,3,4,5 export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=固定训练数据_accumulate_gradients_16_0.0021 --max_epoch=1250 --eval_only=False --fp16=False --epoch_size=1250000 --amp=0 --accumulate_gradients=8 --optimizer=adam_inverse_sqrt,lr=0.0021,warmup_updates=10000 --batch_size=256
+
+加载检查点
+export CUDA_VISIBLE_DEVICES=0,3,4,5 export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.0021_4gpu --reload_checkpoint=/home/skm21/recur-main/train/5M_固定训练数据_lr0.0021_4gpu/periodic-83.pth --max_epoch=250 --eval_only=False --fp16=True --epoch_size=1250000 --amp=1 --accumulate_gradients=2 --batch_size=256
+在加载检查点的额基础上 自动生成数据
+export CUDA_VISIBLE_DEVICES=0,3,4,5 export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data="" --exp_name=train --exp_id=5M_固定训练数据_lr0.0021_4gpu --reload_checkpoint=/home/skm21/recur-main/train/5M_固定训练数据_lr0.0021_4gpu/periodic-83.pth --max_epoch=250 --eval_only=False --fp16=True --epoch_size=1250000 --amp=1 --accumulate_gradients=4 --batch_size=128
+
+
+215
+加载检查点
+export CUDA_VISIBLE_DEVICES=0,3,4,5 export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data=recurrence,/home/skm21/recur-main/data/train/5M.txt,/home/skm21/recur-main/data/valid/1000.txt,/home/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.0001_4gpu --reload_checkpoint=/home/skm21/recur-main/train/5M_固定训练数据_lr0.0001_4gpu/periodic-76.pth --max_epoch=250 --eval_only=False --fp16=False --epoch_size=1250000 --amp=-1 --accumulate_gradients=1 --batch_size=256
+在加载检查点的额基础上 自动生成数据
+export CUDA_VISIBLE_DEVICES=0,3,4,5 export NGPU=4; python -m torch.distributed.launch --nproc_per_node=$NGPU  train.py --reload_data="" --exp_name=train --exp_id=5M_固定训练数据_lr0.0001_4gpu --reload_checkpoint=/home/skm21/recur-main/train/5M_固定训练数据_lr0.0001_4gpu/periodic-76.pth --max_epoch=250 --eval_only=False --fp16=True --epoch_size=1250000 --amp=1 --accumulate_gradients=2 --batch_size=256
+
+export CUDA_VISIBLE_DEVICES=3,5; export NGPU=2; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --exp_name=train --exp_id=5M_不固定训练数据_lr0.00021 --batch_size=256 --max_epoch=250 --reload_data="" --eval_only=False --epoch_size=5000000
+
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5; export NGPU=6; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --reload_data=recurrence,/kercing/skm21/recur-main/data/train/5M.txt,/kercing/skm21/recur-main/data/valid/1000.txt,/kercing/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.00021_6gpu --max_epoch=250 --eval_only=False --accumulate_gradients=2 --epoch_size=5000000 --batch_size=256
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5; export NGPU=6; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --reload_data=recurrence,/kercing/skm21/recur-main/data/train/5M.txt,/kercing/skm21/recur-main/data/valid/1000.txt,/kercing/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.00021_6gpu --max_epoch=250 --eval_only=False --accumulate_gradients=2 --epoch_size=5000000 --batch_size=256
+
+多机多卡
+export CUDA_VISIBLE_DEVICES=0,1,2,3; export NGPU=3; python -m torch.distributed.launch --nnodes=2 --node_rank=0 --nproc_per_node=4 --master_addr="10.1.11.211" --master_port=29501 train.py --reload_data=recurrence,/kercing/skm21/recur-main/data/train/5M.txt,/kercing/skm21/recur-main/data/valid/1000.txt,/kercing/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.00021_10gpu --max_epoch=250 --eval_only=False --amp=0 --accumulate_gradients=2 --epoch_size=5000000 --batch_size=256
+export CUDA_VISIBLE_DEVICES=0,1,2,3; export NGPU=4; python -m torch.distributed.launch --nnodes=2 --node_rank=1 --nproc_per_node=4 --master_addr="10.1.11.211" --master_port=29501 train.py --reload_data=recurrence,/data/skm21/recur-main/data/train/5M.txt,/data/skm21/recur-main/data/valid/1000.txt,/data/skm21/recur-main/data/test/10000.txt --exp_name=train --exp_id=5M_固定训练数据_lr0.00021_10gpu --max_epoch=250 --eval_only=False --accumulate_gradients=2 --epoch_size=5000000 --batch_size=256
+

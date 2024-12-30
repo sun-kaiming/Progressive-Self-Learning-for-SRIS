@@ -1,0 +1,107 @@
+2024-12-14 01:46:20 | INFO | fairseq_cli.interactive | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': None, 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': 'save/model/4500w_combine_train_36w_iter50.pt', 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 6, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': False, 'max_tokens': None, 'batch_size': 1, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': None, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 0, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [1], 'lr': [0.25], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': 'checkpoints', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': None, 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': -1, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 32, 'nbest': 32, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 1, 'input': '-'}, 'model': None, 'task': {'_name': 'translation', 'data': 'data-bin/vocab4', 'source_lang': 'src', 'target_lang': 'tgt', 'load_alignments': False, 'left_pad_source': True, 'left_pad_target': False, 'max_source_positions': 1024, 'max_target_positions': 1024, 'upsample_primary': -1, 'truncate_source': False, 'num_batch_buckets': 0, 'train_subset': 'train', 'dataset_impl': None, 'required_seq_len_multiple': 1, 'eval_bleu': False, 'eval_bleu_args': '{}', 'eval_bleu_detok': 'space', 'eval_bleu_detok_args': '{}', 'eval_tokenized_bleu': False, 'eval_bleu_remove_bpe': None, 'eval_bleu_print_samples': False}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': True}, 'optimizer': None, 'lr_scheduler': {'_name': 'fixed', 'force_anneal': None, 'lr_shrink': 0.1, 'warmup_updates': 0, 'lr': [0.25]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2024-12-14 01:46:20 | INFO | fairseq.tasks.translation | [src] dictionary: 9968 types
+2024-12-14 01:46:20 | INFO | fairseq.tasks.translation | [tgt] dictionary: 40 types
+2024-12-14 01:46:20 | INFO | fairseq_cli.interactive | loading model(s) from save/model/4500w_combine_train_36w_iter50.pt
+2024-12-14 01:46:22 | INFO | fairseq_cli.interactive | NOTE: hypothesis and token scores are output in base 2
+2024-12-14 01:46:22 | INFO | fairseq_cli.interactive | Type the input sentence and press return:
+2024-12-14 01:46:22 | INFO | fairseq_cli.interactive | Total time: 2.868 seconds; translation time: 0.641
+666
+{'_name': None, 'beam': 32, 'nbest': 32, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}
+S-0	+ 1 + 1 + 1 + 2 + 1 + 2 + 1 + 3 + 2 + 2 + 1 + 3 + 1 + 2 + 2 + 4 + 1 + 3 + 1 + 3 + 2
+W-0	0.641	seconds
+H-0	-0.5478543639183044	add x_0_4 sub idiv INT+ 5 n x_0_6
+D-0	-0.5478543639183044	add x_0_4 sub idiv INT+ 5 n x_0_6
+P-0	-1.3135 -1.5635 -0.5524 -1.4597 -0.0022 -0.0185 -0.0000 -0.0209 0.0000
+H-0	-0.5706185102462769	abs add x_0_2 mod add x_0_2 x_0_1 INT- 4
+D-0	-0.5706185102462769	abs add x_0_2 mod add x_0_2 x_0_1 INT- 4
+P-0	-2.2605 -0.4956 -2.0055 -0.2692 -0.1509 -0.5025 -0.0214 -0.0000 -0.0006 0.0000
+H-0	-0.6215291023254395	abs add mod add x_0_2 x_0_1 INT- 4 x_0_2
+D-0	-0.6215291023254395	abs add mod add x_0_2 x_0_1 INT- 4 x_0_2
+P-0	-2.2605 -0.4956 -1.3622 -0.0319 -1.8690 -0.0110 -0.0000 -0.1807 -0.0043 0.0000
+H-0	-0.7392241358757019	add INT+ 4 mod n INT- 4
+D-0	-0.7392241358757019	add INT+ 4 mod n INT- 4
+P-0	-1.3135 -3.2928 -0.0239 -0.6432 -0.3837 -0.2542 -0.0023 0.0000
+H-0	-0.7533981204032898	add sub x_0_8 x_0_12 x_0_6
+D-0	-0.7533981204032898	add sub x_0_8 x_0_12 x_0_6
+P-0	-1.3135 -1.9077 -1.2179 -0.0254 -0.0559 0.0000
+H-0	-0.7548518776893616	add x_0_4 idiv INT+ 5 n
+D-0	-0.7548518776893616	add x_0_4 idiv INT+ 5 n
+P-0	-1.3135 -1.5635 -2.1966 -0.0495 -0.1607 -0.0001 0.0000
+H-0	-0.853083610534668	add x_0_4 sub x_0_8 x_0_12
+D-0	-0.853083610534668	add x_0_4 sub x_0_8 x_0_12
+P-0	-1.3135 -1.5635 -0.5524 -1.6889 -0.0001 0.0000
+H-0	-0.8632808923721313	mul sign x_0_8 x_0_6
+D-0	-0.8632808923721313	mul sign x_0_8 x_0_6
+P-0	-3.8682 -0.1765 -0.1206 -0.1510 0.0000
+H-0	-0.8988757133483887	abs sub add x_0_2 x_0_1 x_0_3
+D-0	-0.8988757133483887	abs sub add x_0_2 x_0_1 x_0_3
+P-0	-2.2605 -2.0534 -0.6529 -0.5937 -0.5214 -0.2102 0.0000
+H-0	-0.9019270539283752	add sub x_0_12 x_0_12 x_0_6
+D-0	-0.9019270539283752	add sub x_0_12 x_0_12 x_0_6
+P-0	-1.3135 -1.9077 -2.0983 -0.0386 -0.0534 0.0000
+H-0	-0.9254213571548462	idiv add x_0_2 x_0_1 x_0_2
+D-0	-0.9254213571548462	idiv add x_0_2 x_0_1 x_0_2
+P-0	-3.6864 -0.5831 -0.8733 -0.3606 -0.0492 0.0000
+H-0	-0.9618971347808838	add x_0_8 sub x_0_6 x_0_12
+D-0	-0.9618971347808838	add x_0_8 sub x_0_6 x_0_12
+P-0	-1.3135 -4.2690 -0.0025 -0.1813 -0.0050 0.0000
+H-0	-0.9687865376472473	add sub x_0_4 x_0_8 x_0_12
+D-0	-0.9687865376472473	add sub x_0_4 x_0_8 x_0_12
+P-0	-1.3135 -1.9077 -2.4565 -0.1350 -0.0001 0.0000
+H-0	-0.9832475781440735	add INT+ 4 idiv x_0_4 sign x_0_9
+D-0	-0.9832475781440735	add INT+ 4 idiv x_0_4 sign x_0_9
+P-0	-1.3135 -3.2928 -0.0239 -1.8168 -1.1347 -0.0004 -0.2839 0.0000
+H-0	-0.9889482855796814	add x_0_12 sub x_0_6 x_0_12
+D-0	-0.9889482855796814	add x_0_12 sub x_0_6 x_0_12
+P-0	-1.3135 -3.7069 -0.0028 -0.8982 -0.0122 0.0000
+H-0	-1.0587313175201416	sub x_0_4 sub x_0_8 x_0_12
+D-0	-1.0587313175201416	sub x_0_4 sub x_0_8 x_0_12
+P-0	-2.8676 -3.2126 -0.0125 -0.2405 -0.0192 0.0000
+H-0	-1.0760631561279297	sub add x_0_12 x_0_6 x_0_12
+D-0	-1.0760631561279297	sub add x_0_12 x_0_6 x_0_12
+P-0	-2.8676 -1.3337 -1.9185 -0.2814 -0.0551 0.0000
+H-0	-1.0886576175689697	add sub x_0_6 x_0_8 x_0_12
+D-0	-1.0886576175689697	add sub x_0_6 x_0_8 x_0_12
+P-0	-1.3135 -1.9077 -3.0358 -0.1455 -0.1295 0.0000
+H-0	-1.1024175882339478	add x_0_6 sub x_0_12 x_0_12
+D-0	-1.1024175882339478	add x_0_6 sub x_0_12 x_0_12
+P-0	-1.3135 -4.8607 -0.0068 -0.4220 -0.0115 0.0000
+H-0	-1.1308776140213013	sub add x_0_4 x_0_12 x_0_8
+D-0	-1.1308776140213013	sub add x_0_4 x_0_12 x_0_8
+P-0	-2.8676 -1.3337 -1.2761 -0.1717 -1.1362 0.0000
+H-0	-1.1459206342697144	sub add x_0_4 x_0_12 x_0_12
+D-0	-1.1459206342697144	sub add x_0_4 x_0_12 x_0_12
+P-0	-2.8676 -1.3337 -1.2761 -0.1717 -1.2265 0.0000
+H-0	-1.1527352333068848	sub add x_0_8 x_0_6 x_0_12
+D-0	-1.1527352333068848	sub add x_0_8 x_0_6 x_0_12
+P-0	-2.8676 -1.3337 -2.3388 -0.3660 -0.0104 0.0000
+H-0	-1.1933269500732422	idiv add x_0_4 x_0_2 x_0_2
+D-0	-1.1933269500732422	idiv add x_0_4 x_0_2 x_0_2
+P-0	-3.6864 -0.5831 -2.0006 -0.1777 -0.7121 0.0000
+H-0	-1.2195196151733398	add x_0_4 sub x_0_6 x_0_10
+D-0	-1.2195196151733398	add x_0_4 sub x_0_6 x_0_10
+P-0	-1.3135 -1.5635 -0.5524 -2.6191 -1.2686 0.0000
+H-0	-1.230858325958252	add x_0_12 sub x_0_8 x_0_12
+D-0	-1.230858325958252	add x_0_12 sub x_0_8 x_0_12
+P-0	-1.3135 -3.7069 -0.0028 -2.3617 -0.0002 0.0000
+H-0	-1.2328500747680664	add x_0_12 sub x_0_4 x_0_12
+D-0	-1.2328500747680664	add x_0_12 sub x_0_4 x_0_12
+P-0	-1.3135 -3.7069 -0.0028 -2.1044 -0.2695 0.0000
+H-0	-1.27522611618042	idiv x_0_8 sign x_0_9
+D-0	-1.27522611618042	idiv x_0_8 sign x_0_9
+P-0	-3.6864 -2.4511 -0.0087 -0.2300 0.0000
+H-0	-1.3117997646331787	abs sub add x_0_2 x_0_1 x_0_2
+D-0	-1.3117997646331787	abs sub add x_0_2 x_0_1 x_0_2
+P-0	-2.2605 -2.0534 -0.6529 -0.5937 -0.5214 -3.1007 0.0000
+H-0	-2.3032376766204834	x_0_12
+D-0	-2.3032376766204834	x_0_12
+P-0	-4.6065 0.0000
+H-0	-2.5041415691375732	x_0_8
+D-0	-2.5041415691375732	x_0_8
+P-0	-5.0083 0.0000
+H-0	-3.32979154586792	x_0_6
+D-0	-3.32979154586792	x_0_6
+P-0	-6.6596 0.0000
+H-0	-3.6580562591552734	x_0_4
+D-0	-3.6580562591552734	x_0_4
+P-0	-7.3161 0.0000

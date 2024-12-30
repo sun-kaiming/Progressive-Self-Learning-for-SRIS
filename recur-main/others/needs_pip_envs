@@ -1,0 +1,1 @@
+pip install numpy scipy sympy -i https://pypi.tuna.tsinghua.edu.cn/simple

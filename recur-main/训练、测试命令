@@ -1,0 +1,10 @@
+测试命令：(在eval_data后面替换为需要测试的数据路径即可)
+python train.py  --export_data=False --eval_only=True  --eval_data=data/valid/1000.txt
+python train.py  --export_data=False --eval_only=True  --eval_data=data/test/10000.txt
+python train.py  --export_data=False --eval_only=True  --eval_data=data/valid/oeis_10000.json
+python train.py  --export_data=False --eval_only=True  --eval_data=data/valid/oeis_1000.json
+
+
+
+生成数据命令：(参数说明 epoch_size:生成的数据条数)(目前在我的台式上还不能生成数据，可能是没有显卡的原因)
+python train.py  --eval_only=False --export_data=True --max_epoch=1 --exp_name=generate_data --exp_id=new_data --epoch_size=100
