@@ -169,3 +169,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+## OEIS
+checkpoints/
+data-bin/
+linux_amd64/
+save/
+tree/
