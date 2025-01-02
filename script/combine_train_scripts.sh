@@ -14,12 +14,12 @@
 python iter_script.py \
   --max-epoch 3 \
   --model-type test_1201-14 \
-  --beam-size 1 \
-  --n-best 1 \
+  --beam-size 32 \
+  --n-best 32 \
   --is-combine True \
   --random-rate-model1 1.0 \
   --random-rate-model2 0.5 \
-  --small-oeis-testset "True" \
+  --small-oeis-testset "False" \
   --gpus-id 0,1 \
   --sta-iter-id 1 \
   --end-iter-id 3
